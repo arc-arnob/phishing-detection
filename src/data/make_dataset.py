@@ -13,7 +13,6 @@ from dotenv import find_dotenv, load_dotenv
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
-# import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
 
 

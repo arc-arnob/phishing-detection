@@ -1,12 +1,17 @@
 repos:
-  - repo: https://github.com/pycqa/flake8
-    rev: '4.0.1'
+  - repo: local
     hooks:
       - id: flake8
+        name: flake8
+        entry: poetry run flake8
+        language: system
         files: '^(src)/'
+        exclude: '^(src)/__init__.py'
 
-  - repo: https://github.com/pycqa/pylint
-    rev: 'v3.0.0'
-    hooks:
       - id: pylint
+        name: pylint
+        entry: poetry run pylint
+        language: system
         files: '^(src)/'
+        args:
+          - --rcfile=pylintrc
