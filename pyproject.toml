@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "remla24-team-11"
-version = "0.0.0"
+name = "src"
+version = "0.1.0"
 description = "Project of the TU Delft Masters course Release Engineering of Machine Learning Applications by group 11"
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
@@ -16,6 +16,8 @@ setuptools = "68.0.0"
 tensorflow = "2.16.1"
 dvc = "3.5.0"
 python-dotenv = "1.0.1"
+pylint = "3.1.0"
+astroid = "3.1.0"
 
 [build-system]
 requires = ["poetry-core"]
