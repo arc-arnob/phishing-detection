@@ -5,6 +5,8 @@ REMLA24-TEAM-11
 
 ### Prerequisites
 You will need to have `poetry` installed on your machine. If you don't have it installed, you can install it by following the instructions [here](https://python-poetry.org/docs/).
+In addition to that, you will need Python 3.11 installed on your machine. You can install it by following the instructions [here](https://www.python.org/downloads/).
+To set poetry to use Python 3.11, run the following command `poetry env use 3.11`.
 
 ### Setup
 1. Clone the repository
