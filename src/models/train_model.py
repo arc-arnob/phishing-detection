@@ -8,6 +8,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Embedding, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
 
+
 def build_model(voc_size, categories):
     """
     Build a convolutional neural network model.
@@ -40,9 +41,10 @@ def build_model(voc_size, categories):
     model.add(Dropout(0.2))
 
     model.add(Flatten())
-    model.add(Dense(len(categories)-1, activation='sigmoid'))
+    model.add(Dense(len(categories) - 1, activation='sigmoid'))
 
     return model
+
 
 def train_model(model, x_train, y_train, x_val, y_val, batch_size, epochs, loss_function, optimizer):
     """
@@ -56,11 +58,13 @@ def train_model(model, x_train, y_train, x_val, y_val, batch_size, epochs, loss_
                      validation_data=(x_val, y_val))
     return hist
 
+
 def save_model(model, filepath):
     """
     Saves model.
     """
     model.save(filepath)
+
 
 if __name__ == '__main__':
     # Dependency
