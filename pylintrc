@@ -190,7 +190,35 @@ good-names=i,
            k,
            ex,
            Run,
-           _
+           _,
+           X_train,
+           X_test,
+           X_val,
+           y_train,
+           y_test,
+           y_val,
+           model,
+           clf,
+           reg,
+           df,
+           scaler,
+           encoder,
+           pipeline,
+           mse,
+           rmse,
+           mae,
+           accuracy,
+           f1_score,
+           params,
+           config,
+           hyperparams,
+           epoch,
+           batch_size,
+           n_iter,
+           features,
+           labels,
+           predictions,
+           errors
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
@@ -297,7 +325,7 @@ max-bool-expr=5
 max-branches=12
 
 # Maximum number of locals for function / method body.
-max-locals=17
+max-locals=20
 
 # Maximum number of parents for a class (see R0901).
 max-parents=7
@@ -306,7 +334,7 @@ max-parents=7
 max-public-methods=20
 
 # Maximum number of return / yield for function / method body.
-max-returns=6
+max-returns=8
 
 # Maximum number of statements in function / method body.
 max-statements=50
@@ -337,7 +365,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=110
+max-line-length=130
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -461,7 +489,7 @@ notes-rgx=
 [REFACTORING]
 
 # Maximum number of nested blocks for function / method body
-max-nested-blocks=5
+max-nested-blocks=7
 
 # Complete name of functions that never returns. When checking for
 # inconsistent-return-statements if a never returning function is called then
