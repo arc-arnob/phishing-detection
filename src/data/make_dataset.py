@@ -1,43 +1,55 @@
+"""
+make_dataset.py
+
+This module contains functions to process raw data and create a final dataset ready for analysis.
+"""
 # -*- coding: utf-8 -*-
-import click
 import logging
 from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
 import os
+import pickle
+import click
+from dotenv import find_dotenv, load_dotenv
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
-import pandas as pd
+# import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
 
-import pickle
 
 
 @click.command()
 @click.argument('input_filepath', type=click.Path(exists=True))
 @click.argument('output_filepath', type=click.Path())
-def main(input_filepath, output_filepath):
+def main():
     """ Runs data processing scripts to turn raw data from (../raw) into
         cleaned data ready to be analyzed (saved in ../processed).
     """
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
-    # TODO: Add a data processing stage.
+    # TO_DO: Add a data processing stage.
 
     # File Paths
     train_file = os.path.join(input_filepath, 'train.txt')
     test_file = os.path.join(input_filepath, 'test.txt')
     val_file = os.path.join(input_filepath, 'val.txt')
 
-    train = [line.strip() for line in open(train_file, "r").readlines()[1:]]
+    with open(train_file, "r", encoding="utf-8") as f:
+        train_lines = f.readlines()[1:]
+
+    train = [line.strip() for line in train_lines]
     raw_x_train = [line.split("\t")[1] for line in train]
     raw_y_train = [line.split("\t")[0] for line in train]
 
-    test = [line.strip() for line in open(test_file, "r").readlines()]
+    with open(test_file, "r", encoding="utf-8") as f:
+        test_lines = f.readlines()
+    test = [line.strip() for line in test_lines]
     raw_x_test = [line.split("\t")[1] for line in test]
     raw_y_test = [line.split("\t")[0] for line in test]
 
-    val=[line.strip() for line in open(val_file, "r").readlines()]
+    with open(val_file, "r", encoding="utf-8") as f:
+        val_lines = f.readlines()
+    val=[line.strip() for line in val_lines]
     raw_x_val=[line.split("\t")[1] for line in val]
     raw_y_val=[line.split("\t")[0] for line in val]
 
@@ -68,8 +80,8 @@ def main(input_filepath, output_filepath):
 
 
 if __name__ == '__main__':
-    log_fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    logging.basicConfig(level=logging.INFO, format=log_fmt)
+    LOG_FMT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    logging.basicConfig(level=logging.INFO, format=LOG_FMT)
 
     # not used in this stub but often useful for finding various files
     project_dir = Path(__file__).resolve().parents[2]

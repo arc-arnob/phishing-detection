@@ -1,11 +1,17 @@
+"""
+model_training.py
+
+This module contains functions for building, training, and saving a cnn model for text classification.
+"""
 import pickle
-import logging
-from pathlib import Path
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Embedding, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
 
-def build_model(voc_size, sequence_length, categories):
+def build_model(voc_size, categories):
+    """
+    Build a convolutional neural network model.
+    """
     model = Sequential()
     model.add(Embedding(voc_size + 1, 50))
     model.add(Conv1D(128, 3, activation='tanh'))
@@ -39,6 +45,9 @@ def build_model(voc_size, sequence_length, categories):
     return model
 
 def train_model(model, x_train, y_train, x_val, y_val, batch_size, epochs, loss_function, optimizer):
+    """
+    Trains model with x_train and y_train.
+    """
     model.compile(loss=loss_function, optimizer=optimizer, metrics=['accuracy'])
     hist = model.fit(x_train, y_train,
                      batch_size=batch_size,
@@ -48,6 +57,9 @@ def train_model(model, x_train, y_train, x_val, y_val, batch_size, epochs, loss_
     return hist
 
 def save_model(model, filepath):
+    """
+    Saves model.
+    """
     model.save(filepath)
 
 if __name__ == '__main__':
@@ -68,8 +80,7 @@ if __name__ == '__main__':
     # Assuming char_index is defined elsewhere
     voc_size = len(params['char_index'].keys())
 
-    model = build_model(voc_size, params['sequence_length'], params['categories'])
-    
+    model = build_model(voc_size, params['categories'])
     # Dependency
     x_train = np.load('data/processed/x_train.npy')
     y_train = np.load('data/processed/y_train.npy')
@@ -82,7 +93,5 @@ if __name__ == '__main__':
                        params['loss_function'], params['optimizer'])
 
     # Save the trained model
-    model_output_filepath = 'models/model.keras'
-    save_model(model, model_output_filepath)
-
-    
+    MODEL_OUTPUT_FILEPATH = 'models/model.keras'
+    save_model(model, MODEL_OUTPUT_FILEPATH)
