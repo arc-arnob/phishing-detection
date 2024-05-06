@@ -1,8 +1,12 @@
+"""
+evaluation.py
 
+This module contains functions for evaluating model performance.
+"""
 from keras.models import load_model
 import numpy as np
 from dvclive import Live
-from sklearn.metrics import classification_report, confusion_matrix,accuracy_score, roc_auc_score, f1_score
+from sklearn.metrics import confusion_matrix,accuracy_score, roc_auc_score, f1_score
 
 def evaluate(model, data, labels, live):
 
@@ -43,6 +47,7 @@ def evaluate(model, data, labels, live):
         y_pred,
         name=f"prc",
     )
+
 
 if __name__ == '__main__':
     EVAL_PATH = "eval"
