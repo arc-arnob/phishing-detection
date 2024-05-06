@@ -16,7 +16,7 @@ To set poetry to use Python 3.11, run the following command `poetry env use 3.11
 To lint the code, run the following command `pre-commit run --all-files`
 
 
-### Data
+### Data Setup
 To get data you can do one of two things
 1. Download from Kaggle and place the train.txt, test.txt and val.txt files in data/raw/
 2. Install wget and `cd` to `src` and run following lines of shell commands:
@@ -28,6 +28,9 @@ To get data you can do one of two things
 
     wget https://drive.google.com/uc\?export=download\&confirm=no_antivirus\&id=1-EoxS7YPMXC3iYZF46GPH4BNOeWnZJmf -O ./data/raw/val.zip
     ```
+
+### Execute Pipeline
+To run the pipeline simply run `dvc repro`
 
 
 # Project Structure
@@ -50,7 +53,7 @@ The directory structure of your new project looks like this:
 │
 ├── notebooks          <- Jupyter notebooks for experiments
 │
-├── eval               <- #TODO RADO
+├── eval               <- Generated metrics and plot data in JSON file
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
@@ -62,6 +65,7 @@ The directory structure of your new project looks like this:
 │   ├── __init__.py    <- Makes src a Python module
 │   │
 │   ├── data           <- Scripts to download or generate data
+|   |   └── fetch_dataset.py
 │   │   └── make_dataset.py
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
