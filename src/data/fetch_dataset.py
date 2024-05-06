@@ -16,15 +16,6 @@ def extract_files(zip_file, extract_to):
     with zipfile.ZipFile(zip_file, "r") as f:
         f.extractall(extract_to)
 
-# Download and extract testing data
-# test_zip_path, _ = urllib.request.urlretrieve(test_URL)
 extract_files(test_zip_path, EXTRACT_DIR)
-
-# Download and extract training data
-# train_zip_path, _ = urllib.request.urlretrieve(train_URL)
 extract_files(train_zip_path, EXTRACT_DIR)
-
-
-# Download and extract validation data
-# val_zip_path, _ = urllib.request.urlretrieve(val_URL)
 extract_files(val_zip_path, EXTRACT_DIR)
