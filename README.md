@@ -30,7 +30,10 @@ To get data you can do one of two things
     ```
 
 ### Execute Pipeline
-To run the pipeline simply run `dvc repro`
+To run the pipeline simply run `dvc repro` <br>
+After running the pipeline we can observe some results: <br>
+To see metrics run `dvc metrics show` <br>
+To see plots run `dvc plots show`
 
 
 # Project Structure
