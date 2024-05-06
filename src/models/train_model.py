@@ -5,8 +5,8 @@ This module contains functions for building, training, and saving a cnn model fo
 """
 import pickle
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Embedding, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
+from keras._tf_keras.keras.models import Sequential
+from keras._tf_keras.keras.layers import Embedding, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
 
 
 def build_model(voc_size, categories):

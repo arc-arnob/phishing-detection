@@ -7,10 +7,10 @@ This module contains functions to process raw data and create a final dataset re
 import os
 import pickle
 import sys
-from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
-from keras.preprocessing.sequence import pad_sequences
+from sklearn.preprocessing import LabelEncoder
+from keras._tf_keras.keras.preprocessing.text import Tokenizer
+from keras._tf_keras.keras.preprocessing.text import pad_sequences
 
 
 def read_data(data_file):
