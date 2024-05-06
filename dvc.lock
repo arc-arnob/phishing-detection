@@ -59,7 +59,7 @@ stages:
     outs:
     - path: models/model.keras
       hash: md5
-      md5: 7352aeabb3ea3414bc9d3634947e1fa7
+      md5: 08b3fae19a5f9f3634c775d297a32fdf
       size: 5472435
   evaluate:
     cmd: python src/models/evaluation.py
@@ -74,22 +74,9 @@ stages:
       size: 2913712
     - path: models/model.keras
       hash: md5
-      md5: 7352aeabb3ea3414bc9d3634947e1fa7
+      md5: 08b3fae19a5f9f3634c775d297a32fdf
       size: 5472435
     - path: src/models/evaluation.py
       hash: md5
-      md5: 0c2bb3067ac77e67425c6819df98e86e
-      size: 1384
-    outs:
-    - path: eval/accuracy.txt
-      hash: md5
-      md5: 6437a4eecc1427a8a9dcebc654b43c08
-      size: 17
-    - path: eval/classification_report.txt
-      hash: md5
-      md5: 1308c907c7c6c339df62a8db37d2118d
-      size: 326
-    - path: eval/confusion_matrix.csv
-      hash: md5
-      md5: a78ff1c5871921c8102fc0098f3cee8a
-      size: 100
+      md5: 0879f540b5efc1a85eb72048d0a21a5c
+      size: 1546
