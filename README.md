@@ -57,12 +57,10 @@ To get data you can do one of two things
 1. Download from Kaggle
 2. Install wget and run following lines of code
 
-    ```
-    wget https://drive.usercontent.google.com/download\?id\=1N2vhSR7Zi2qYbtxK4-unO8dvzo8oji7z\&export\=download\&authuser\=0\&confirm\=t -O train.zip
-    ```
-    ```
-    wget https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1I5RSGrXX7qFAEcFouAIirhICF4S3cLF9 -O test.zip
-    ```
-    ```
-    wget https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1-EoxS7YPMXC3iYZF46GPH4BNOeWnZJmf -O val.zip
+    ```bash
+    wget https://drive.usercontent.google.com/download\?id\=1N2vhSR7Zi2qYbtxK4-unO8dvzo8oji7z\&export\=download\&authuser\=0\&confirm\=t -O ./data/raw/train.zip
+    
+    wget https://drive.google.com/uc\?export=download\&confirm=no_antivirus\&id=1I5RSGrXX7qFAEcFouAIirhICF4S3cLF9 -O ./data/raw/test.zip
+
+    wget https://drive.google.com/uc\?export=download\&confirm=no_antivirus\&id=1-EoxS7YPMXC3iYZF46GPH4BNOeWnZJmf -O ./data/raw/val.zip
     ```
