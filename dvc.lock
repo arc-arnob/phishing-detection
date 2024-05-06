@@ -17,13 +17,13 @@ stages:
       size: 46258330
     - path: src/data/make_dataset.py
       hash: md5
-      md5: f2ff42b6a0c71af19ca12b6626450681
-      size: 3206
+      md5: 4029d60f9fd2c3c0fcda82e7e9fd1740
+      size: 2913
     outs:
     - path: data/processed
       hash: md5
-      md5: 9a03947f9b2d59c2a3adda9b11753724.dir
-      size: 1555443592
+      md5: 3edd2f149067efab16f42cad6c95bc98.dir
+      size: 1555441976
       nfiles: 6
     - path: models/char_index.pkl
       hash: md5
