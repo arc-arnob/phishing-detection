@@ -10,7 +10,7 @@ import sys
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from keras._tf_keras.keras.preprocessing.text import Tokenizer
-from keras._tf_keras.keras.preprocessing.text import pad_sequences
+from keras._tf_keras.keras.preprocessing.sequence import pad_sequences
 
 
 def read_data(data_file):
