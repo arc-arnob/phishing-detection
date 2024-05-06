@@ -1,14 +1,6 @@
-
-# Test Link: https://drive.google.com/uc?export=download&id=1I5RSGrXX7qFAEcFouAIirhICF4S3cLF9
-# Train Link: https://drive.google.com/uc?export=download&id=1N2vhSR7Zi2qYbtxK4-unO8dvzo8oji7z
-# Val Link: https://drive.google.com/file/d/1-EoxS7YPMXC3iYZF46GPH4BNOeWnZJmf/view?usp=drive_link
-
-
-import urllib.request
 import zipfile
 import os
 
-# TODO: Fix Train download, too big for autoscan. Swap link and you'll see things getting downloaded
 train_zip_path = './data/raw/train.zip'
 test_zip_path = './data/raw/test.zip'
 val_zip_path = './data/raw/val.zip'
@@ -30,7 +22,6 @@ extract_files(test_zip_path, EXTRACT_DIR)
 
 # Download and extract training data
 # train_zip_path, _ = urllib.request.urlretrieve(train_URL)
-train_zip_path = './data/raw/train.zip'
 extract_files(train_zip_path, EXTRACT_DIR)
 
 
