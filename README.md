@@ -42,8 +42,8 @@ The directory structure of your new project looks like this:
 ├── Makefile[X]        <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── external[X]       <- Data from third party sources.
+│   ├── interim[X]        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
@@ -54,7 +54,7 @@ The directory structure of your new project looks like this:
 ├── notebooks          <- Jupyter notebooks for experiments
 │
 ├── eval               <- Generated metrics and plot data in JSON file
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+├── reports[X]            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
@@ -73,7 +73,7 @@ The directory structure of your new project looks like this:
 │   │   ├── evaluation.py
 │   │   └── train_model.py
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   └── visualization[X]  <- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
 │
 └── tox.ini[X]            <- tox file with settings for running tox; see tox.readthedocs.io
