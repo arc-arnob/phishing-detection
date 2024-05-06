@@ -38,28 +38,28 @@ stages:
       size: 836619328
     - path: data/processed/x_val.npy
       hash: md5
-      md5: 6cf90ab489d52d04b2b739d1648378c9
-      size: 412064128
+      md5: 22128e9681506e90a2b437d45da5f8cf
+      size: 412063328
     - path: data/processed/y_train.npy
       hash: md5
       md5: 9b660634af0db95a6e2932208bc73b91
       size: 8366320
     - path: data/processed/y_val.npy
       hash: md5
-      md5: e024823c3485bb493e855fbfdd4f452e
-      size: 4120768
+      md5: 7d7c949969abb0303ea9373bf519cc84
+      size: 4120760
     - path: models/char_index.pkl
       hash: md5
       md5: 941dc7e5461b0a429941866a00102b8c
       size: 444
     - path: src/models/train_model.py
       hash: md5
-      md5: 7a2ba5569ea5ac718006e601f4c359ed
-      size: 2916
+      md5: 3a483db36feb6ecb8e88cc5fb9539af9
+      size: 3145
     outs:
     - path: models/model.keras
       hash: md5
-      md5: c0430fad5cfbd4dd548c485588b5b004
+      md5: 7352aeabb3ea3414bc9d3634947e1fa7
       size: 5472435
   evaluate:
     cmd: python src/models/evaluation.py
