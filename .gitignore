@@ -90,3 +90,7 @@ target/
 
 # DVC plots
 dvc_plots/
+
+# Data
+data/
+!data/raw/*.dvc
